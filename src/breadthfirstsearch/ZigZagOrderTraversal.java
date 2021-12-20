@@ -36,7 +36,7 @@ public class ZigZagOrderTraversal {
         Queue<TreeNode> queue = new LinkedList<>();
 
         queue.offer(root);
-
+        boolean leftToRight = true;
         while(!queue.isEmpty())
         {
             int size = queue.size();
@@ -45,7 +45,7 @@ public class ZigZagOrderTraversal {
                 TreeNode current = queue.poll();
 
                 assert current != null;
-                if(i%2==0)
+                if(leftToRight)
                     currentLevel.add(current.getValue());
                 else
                     currentLevel.add(0,current.getValue());
@@ -57,6 +57,8 @@ public class ZigZagOrderTraversal {
             }
 
             result.add(currentLevel);
+            leftToRight=!leftToRight;
+            // [[12], [7, 1], [9, 10, 5]]
 
         }
 
