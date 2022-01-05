@@ -18,7 +18,6 @@ public class MaximumDepth {
         {
             if(node == null)
                 return 0;
-            //System.out.println("value " + node.value);
             int leftDepth = inorder(node.left);
             int rightDepth = inorder(node.right);
 

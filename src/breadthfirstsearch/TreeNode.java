@@ -35,4 +35,15 @@ public class TreeNode {
     public void setValue(int value) {
         this.value = value;
     }
+
+    public static void inorder(TreeNode node)
+    {
+        if(node == null)
+            return;
+
+        System.out.print(node.getValue() + ",");
+        inorder(node.left);
+        inorder(node.right);
+
+    }
 }
