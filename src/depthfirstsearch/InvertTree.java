@@ -39,7 +39,6 @@ public class InvertTree {
         TreeNode newTree = new TreeNode(node.value);
         newTree.left = invertTree(node.right);
         newTree.right = invertTree(node.left);
-        //inorder(node.right);
         return newTree;
     }
 
