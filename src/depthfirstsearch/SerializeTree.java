@@ -17,7 +17,7 @@ public class SerializeTree {
             outputStream.writeInt(Integer.MIN_VALUE);
             return;
         }
-        outputStream.writeInt(node.value);
+        outputStream.writeInt(node.val);
         serialize(node.left,outputStream);
         serialize(node.right,outputStream);
     }

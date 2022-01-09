@@ -4,10 +4,10 @@ package breadthfirstsearch;
 public class TreeNode {
     public TreeNode left;
     public TreeNode right;
-    public int value;
+    public int val;
 
-    public TreeNode(int value) {
-        this.value = value;
+    public TreeNode(int val) {
+        this.val = val;
         this.left = null;
         this.right = null;
     }
@@ -28,12 +28,12 @@ public class TreeNode {
         this.left = left;
     }
 
-    public int getValue() {
-        return value;
+    public int getVal() {
+        return val;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setVal(int val) {
+        this.val = val;
     }
 
     public static void inorder(TreeNode node)
@@ -41,7 +41,7 @@ public class TreeNode {
         if(node == null)
             return;
 
-        System.out.print(node.getValue() + ",");
+        System.out.print(node.getVal() + ",");
         inorder(node.left);
         inorder(node.right);
 

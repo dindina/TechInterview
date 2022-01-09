@@ -46,9 +46,9 @@ public class ZigZagOrderTraversal {
 
                 assert current != null;
                 if(leftToRight)
-                    currentLevel.add(current.getValue());
+                    currentLevel.add(current.getVal());
                 else
-                    currentLevel.add(0,current.getValue());
+                    currentLevel.add(0,current.getVal());
                     if (current.getLeft() != null)
                         queue.offer(current.getLeft());
                     if (current.getRight() != null)

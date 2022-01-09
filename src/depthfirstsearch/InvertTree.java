@@ -26,7 +26,7 @@ public class InvertTree {
         if(node == null)
             return;
 
-        System.out.print(node.getValue() + ",");
+        System.out.print(node.getVal() + ",");
         inorder(node.left);
         inorder(node.right);
 
@@ -36,7 +36,7 @@ public class InvertTree {
         if(node == null)
             return null;
 
-        TreeNode newTree = new TreeNode(node.value);
+        TreeNode newTree = new TreeNode(node.val);
         newTree.left = invertTree(node.right);
         newTree.right = invertTree(node.left);
         return newTree;

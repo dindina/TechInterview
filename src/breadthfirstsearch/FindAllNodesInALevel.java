@@ -1,7 +1,5 @@
 package breadthfirstsearch;
 
-import sun.reflect.generics.tree.Tree;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -45,7 +43,7 @@ public class FindAllNodesInALevel {
             for(int i=0 ; i< size ; i++) {
                 TreeNode current = queue.poll();
 
-                currentLevel.add(current.getValue());
+                currentLevel.add(current.getVal());
 
                     if (current.getLeft() != null)
                         queue.offer(current.getLeft());
@@ -75,7 +73,7 @@ public class FindAllNodesInALevel {
             for(int i=0; i< size;i++)
             {
                 TreeNode item = queue.poll();
-                currentLevel.add(item.getValue());
+                currentLevel.add(item.getVal());
                 if(item.getRight() != null)
                 {
                     queue.offer(item.getRight());
