@@ -9,7 +9,7 @@ import java.util.Set;
         Explanation: The answer is "abc", with the length of 3.*/
 // sliding window
 
-public class LongestSubStringWithoutRepeating<maxlength> {
+public class LongestSubStringWithoutRepeating{
 
     public static void main(String[] args) {
         String str = "abcabcbb"; // solution abc
@@ -25,7 +25,7 @@ public class LongestSubStringWithoutRepeating<maxlength> {
         for(windowend=0;windowend<str.length();windowend++)
         {
             if (!set.contains(str.charAt(windowend))) {
-                set.add(str.charAt(windowend++));
+                set.add(str.charAt(windowend));
                 maxlength = Math.max(maxlength, set.size());
             } else { // moving the window and removing from the set
                 set.remove(str.charAt(windowstart++));
