@@ -36,6 +36,7 @@ public class TopKNumbers {
         for(int i=k;i<nums.length;i++) {
             if(nums[i] > priorityQueue.peek())
             {
+                priorityQueue.poll();
                 priorityQueue.offer(nums[i]);
             }
 
