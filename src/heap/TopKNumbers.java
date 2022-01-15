@@ -69,7 +69,7 @@ public class TopKNumbers {
         priorityQueue.offer("11111111111111");
         while(!priorityQueue.isEmpty())
             System.out.println(priorityQueue.poll());*/
-        System.out.println("hello");
+        /*System.out.println("hello");
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>((n1,n2)->n1-n2);
         priorityQueue.offer(3);
         priorityQueue.offer(1);
@@ -78,7 +78,7 @@ public class TopKNumbers {
         priorityQueue.offer(2);
         priorityQueue.offer(11);
 
-        printPriorityQueue(priorityQueue);
+        printPriorityQueue(priorityQueue);*/
 
     }
 
