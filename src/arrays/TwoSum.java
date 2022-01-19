@@ -37,7 +37,7 @@ public class TwoSum {
 
     public static void main(String[] args) {
 
-        int[] array = new int[] { 10, 2, 9 ,3 };
+        int[] array = new int[] { 10, 2, 9 ,4 };
         int target = 19;
         Map<Integer, Integer> map = new HashMap<>();
         for (int ptr = 0; ptr < array.length; ptr++) {
@@ -53,6 +53,27 @@ public class TwoSum {
         }
         //twosum();
         twoSum();
+        int [] result = two_sum_new(array,13);
+        System.out.println(result[0]);
+        System.out.println(result[1]);
+    }
+
+    public static int[] two_sum_new(int [] nums, int target)
+    {
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            int pairneeded = target-nums[i];
+            if(map.containsKey(pairneeded))
+            {
+                int[] result = new int[2];
+                result[0] = map.get(pairneeded);
+                result[1] = i;
+                return result;
+            }
+            map.put(nums[i],i);
+        }
+        return new int[]{-1,-1};
     }
 
 
