@@ -18,21 +18,21 @@ Output: 1
 
  */
 public class ContainerWithMostWater {
-    public int maxArea(int[] nums) {
+    public int maxArea(int[] height) {
 
         int left = 0;
-        int right = nums.length-1;
+        int right = height.length-1;
 
         int maxarea = 0;
 
         while(left < right)
         {
             //calculate area between left and right
-            int area = Math.min(nums[left],nums[right])*(right-left);
+            int area = Math.min(height[left],height[right])*(right-left);
             maxarea = Math.max(area,maxarea);
             // how to increment the pointer ?
 
-            if(nums[left] > nums[right])
+            if(height[left] > height[right])
                 right--;
             else
                 left++;
@@ -42,7 +42,7 @@ public class ContainerWithMostWater {
     }
 
     public static void main(String[] args) {
-        int [] nums = new int[]{1,8,6,2,5,4,8,3,7};
+        int [] nums = new int[]{1,2,68,2,5,4,60,3,6};
         System.out.println(new ContainerWithMostWater().maxArea(nums));
 
     }
