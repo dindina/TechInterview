@@ -11,13 +11,17 @@ public class TopKNumbers {
     private static Integer findKthSmallestNumber(final int[] nums, final int k) {
 
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>((n1,n2)->n2-n1);
-        for(int i=0; i< k ; i++)
+        for(int i=0; i< k ; i++) {
+            System.out.println("i = " +i);
             priorityQueue.offer(nums[i]);
+        }
 
         for(int i=k ; i< nums.length ; i++)
         {
+            System.out.println("i1 = " +i);
             if(nums[i] < priorityQueue.peek())
             {
+                System.out.println("i = " +i);
                 priorityQueue.poll();
                 priorityQueue.offer(nums[i]);
             }
@@ -41,17 +45,17 @@ public class TopKNumbers {
             }
 
         }
-        return new ArrayList<>(priorityQueue);
+        return new ArrayList(priorityQueue);
     }
 
 
     public static void main(String[] args) {
-        int[] nums = new int[]{ 5,6,-7,8,9,-1 };
-        List<Integer> result = TopKNumbers.findKLargestNumbers(nums, 3);
-        System.out.println("Here are the top K numbers: " + result);
+        int[] nums = new int[]{ 5,6,-7,31 };
+        //List<Integer> result = TopKNumbers.findKLargestNumbers(nums, 3);
+        //System.out.println("Here are the top K numbers: " + result);
 
-        System.out.println("1st smallest number " + TopKNumbers.findKthSmallestNumber(nums,1));
-        System.out.println("2nd smallest number " + TopKNumbers.findKthSmallestNumber(nums,2));
+        //System.out.println("1st smallest number " + TopKNumbers.findKthSmallestNumber(nums,1));
+        //System.out.println("2nd smallest number " + TopKNumbers.findKthSmallestNumber(nums,2));
         System.out.println("3rd smallest number " + TopKNumbers.findKthSmallestNumber(nums,3));
 
 
