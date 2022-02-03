@@ -4,16 +4,22 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
+/*
+In an alien language, surprisingly, they also use English lowercase letters,
+but possibly in a different order.
+The order of the alphabet is some permutation of lowercase letters.
 
+Given a sequence of words written in the alien language,
+and the order of the alphabet,
+return true if and only if the given words are sorted lexicographically
+in this alien language.
+ */
 
-public class VerifyingAlienDictonary {
+public class VerifyingAlienDictionary {
     public static void main(String[] args) {
-        String [] words = new String[]{"hello","hell"};
+        String [] words = new String[]{"hell","hello"};
         String order = "hlabcdefgijkmnopqrstuvwxyz";
         System.out.println(isSorted(words,order));
-
-        Arrays.sort(words);
-        System.out.println("after sorting " + words);
     }
 
     private static boolean isSorted(final String[] words, final String order) {
@@ -21,7 +27,7 @@ public class VerifyingAlienDictonary {
         Map<Character,Integer> map = new HashMap<>();
         for(int i =0; i < order.length(); i++)
             map.put(order.charAt(i),i);
-        System.out.println(map);
+        //System.out.println(map);
 
         // use the map to compare the strings in the arrays
         for(int i= 1 ; i < words.length ; i++) {

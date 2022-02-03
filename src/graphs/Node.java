@@ -8,7 +8,7 @@ import java.util.Queue;
 import java.util.Set;
 
 
-class Node {
+public class Node {
     public int val;
     public List<Node> neighbors;
     public Node() {
@@ -54,5 +54,10 @@ class Node {
         }
 
         return visited;
+    }
+
+    public String toString()
+    {
+        return String.valueOf(this.val);
     }
 }

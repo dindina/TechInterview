@@ -1,9 +1,6 @@
-package graphs;
-
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
+import graphs.Node;
 
 
 public class CloneGraph {
@@ -15,7 +12,6 @@ public class CloneGraph {
         Node n3 = new Node(3);
         Node n4 = new Node(4);
         Node n5 = new Node(5);
-
         n0.addEdge(n1);
         n1.addEdge(n0);n1.addEdge(n3);n1.addEdge(n2);
         n2.addEdge(n1);n2.addEdge(n4);
@@ -23,27 +19,19 @@ public class CloneGraph {
         n4.addEdge(n2);n4.addEdge(n3);
         n5.addEdge(n3);
 
-        System.out.println("original");
-        Node.bfsTraveral(n0);
-
-        Node clone = cloneGraph(n0);
-
-        System.out.println("after cloned");
-        Node.bfsTraveral(clone);
-
+        System.out.println(cloneGraph(n0));
 
     }
-    static Map<Node,Node> map = new HashMap<>();
 
-    public static Node cloneGraph(Node node) {
+    private static Node cloneGraph(final Node node) {
 
-        if( node == null)
-            return null;
-
+        if(node == null) return null;
+        Map<Node,Node> map = new HashMap<>();
         Node clone = new Node(node.val);
-        map.put(node,clone);
+        map.put(node,clone); // contains the key as the actual node and value is the clone
 
-        for(Node neighbor : node.neighbors)
+        // find all the neighbors of the node
+        for( Node neighbor : node.neighbors)
         {
             if(map.containsKey(neighbor))
             {
@@ -54,12 +42,9 @@ public class CloneGraph {
                 clone.neighbors.add(cloneGraph(neighbor));
             }
         }
-
-
         return clone;
 
+
+
     }
-
-
-
 }
