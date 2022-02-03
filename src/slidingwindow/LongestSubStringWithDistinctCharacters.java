@@ -22,7 +22,7 @@ public class LongestSubStringWithDistinctCharacters {
             windowString.append(str.charAt(windowend));
             if(windowend-windowstart+1 ==k )
             {
-                //isUnique(w)
+                //isUnique(windowString)
                 windowstart++;
             }
 

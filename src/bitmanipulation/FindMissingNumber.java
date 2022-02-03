@@ -9,20 +9,20 @@ public class FindMissingNumber {
         int x2 = arr[0];
         for (int i = 1; i < n-1; i++)
         {
-            System.out.print("xor  "+ x2 + ", " + arr[i]);
+            //System.out.print("xor  "+ x2 + ", " + arr[i]);
             x2 = x2 ^ arr[i];
-            System.out.println(" = " + x2);
+            //System.out.println(" = " + x2);
         }
-        System.out.println("x2 is " + x2);
+        //System.out.println("x2 is " + x2);
 
 
         int x1 = 1;
         for (int i = 2; i <= n; i++) {
-            System.out.print("xor  "+ x1 + ", " + i);
+            //System.out.print("xor  "+ x1 + ", " + i);
             x1 = x1 ^ i;
-            System.out.println(" = " + x1);
+            //System.out.println(" = " + x1);
         }
-        System.out.println("x1 is " + x1);
+        //System.out.println("x1 is " + x1);
 
 
 
