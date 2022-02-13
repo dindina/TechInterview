@@ -3,7 +3,6 @@ package heap;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.PriorityQueue;
-import com.sun.xml.internal.xsom.XSUnionSimpleType;
 
 
 public class HeapUsage {

@@ -1,8 +1,5 @@
 package arrays;
 
-import java.util.Arrays;
-import com.sun.xml.internal.xsom.XSUnionSimpleType;
-import apple.laf.JRSUIConstants;
 
 
 /*
