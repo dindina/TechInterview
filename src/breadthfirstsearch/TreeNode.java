@@ -46,4 +46,10 @@ public class TreeNode {
         inorder(node.right);
 
     }
+
+    @Override
+    public String toString()
+    {
+        return String.valueOf(this.val);
+    }
 }
