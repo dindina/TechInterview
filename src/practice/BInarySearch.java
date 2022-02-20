@@ -23,20 +23,21 @@ public class BInarySearch {
     public int search(int[] nums, int target) {
         int start=0;
         int end =nums.length-1;
-        int mid = (start+end)/2;
-        while(mid > 0 )
+
+        while(start <= end )
         {
+            int mid = start+(end-start      )/2;
             if(nums[mid] == target)
                 return mid;
             if(nums[mid] >target)
             {
-                end =mid;
+                end =mid-1;
             }
             else if (nums[mid] < target)
             {
-                start=mid;
+                start=mid+1;
             }
-            mid = (start+end)/2;
+
         }
         return -1;
 
