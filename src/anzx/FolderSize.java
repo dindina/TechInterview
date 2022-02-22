@@ -2,7 +2,6 @@ package anzx;
 
 import java.io.File;
 import java.io.IOException;
-import sun.lwawt.macosx.CSystemTray;
 
 
 public class FolderSize {
