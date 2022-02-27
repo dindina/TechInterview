@@ -1,5 +1,7 @@
 package heap;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 import java.util.PriorityQueue;
 
 
@@ -9,9 +11,18 @@ public class KthLargestElementInStream {
 
     public KthLargestElementInStream(int k, int[]nums) {
         K = k;
-        for (int i = 0; i < nums.length; i++)
-            priorityQueue.add(nums[i]);
+        //for (int i = 0; i < nums.length; i++)
+          //  priorityQueue.add(nums[i]);
+        for (int num: nums) {
+            priorityQueue.offer(num);
         }
+
+        System.out.println(priorityQueue);
+        }
+
+
+
+
 
         public int add(int val) {
             priorityQueue.add(val);

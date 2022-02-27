@@ -8,21 +8,37 @@ import java.util.PriorityQueue;
 public class HeapUsage {
 
     public static void main(String[] args) {
-        PriorityQueue<Integer> minPriorityQueue = new PriorityQueue<>();
-        PriorityQueue<Integer> maxPriorityQueue = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> minheap = new PriorityQueue<>();
+        PriorityQueue<Integer> maxheap = new PriorityQueue<>(Collections.reverseOrder());
 
-        minPriorityQueue.offer(11);
-        minPriorityQueue.offer(31);
-        minPriorityQueue.offer(-5);
-        minPriorityQueue.offer(1);
-        printPriorityQueue(minPriorityQueue);
+        minheap.offer(11);
+        minheap.offer(31);
+        minheap.offer(-5);
+        minheap.offer(1);
+        printPriorityQueue(minheap);
 
-        maxPriorityQueue.offer(3);
-        maxPriorityQueue.offer(31);
-        maxPriorityQueue.offer(51);
-        maxPriorityQueue.offer(1);
-        printPriorityQueue(maxPriorityQueue);
+        maxheap.offer(3);
+        maxheap.offer(31);
+        maxheap.offer(51);
+        maxheap.offer(1);
+        printPriorityQueue(maxheap);
 
+        PriorityQueue<Integer[]> pq = new  PriorityQueue<>((a, b) -> {
+            System.out.println("a[0]" +a[0]);
+            System.out.println("b[0]" +b[0]);
+            System.out.println("a[1]" +a[1]);
+            System.out.println("b[1]" +b[1]);
+            if (a[0] == b[0]) return b[1] - a[1];
+            else return b[0] - a[0];
+        });
+        Integer [] nums1 = new Integer[]{5,6,0,0};
+        System.out.println(nums1);
+        Integer [] nums2 = new Integer[]{1,4,1,0};
+        System.out.println(nums2);
+        pq.offer(nums1);
+        pq.offer(nums2);
+
+        System.out.println("pq " + pq);
 
     }
 
