@@ -12,14 +12,14 @@ import java.util.Set;
 public class LongestSubStringWithoutRepeating{
 
     public static void main(String[] args) {
-        String str = "abcabcbb"; // solution abc
+        String str = ""; // solution abc
         System.out.println(solution(str));
 
     }
 
     private static int solution(final String str) {
         int maxlength = 0;
-        int windowend = 0, windowstart = 0;
+        int windowend, windowstart = 0;
 
         Set<Character> set = new HashSet<>();
         for(windowend=0;windowend<str.length();windowend++)
