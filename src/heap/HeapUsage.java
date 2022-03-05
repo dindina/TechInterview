@@ -9,13 +9,15 @@ public class HeapUsage {
 
     public static void main(String[] args) {
         PriorityQueue<Integer> minheap = new PriorityQueue<>();
-        PriorityQueue<Integer> maxheap = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> maxheap = new PriorityQueue<>((a,b)->b-a);
 
-        minheap.offer(11);
-        minheap.offer(31);
-        minheap.offer(-5);
+
         minheap.offer(1);
+        minheap.offer(8);
+        minheap.offer(3);
+        minheap.offer(5);
         printPriorityQueue(minheap);
+        //System.out.println("minheap " + minheap);
 
         maxheap.offer(3);
         maxheap.offer(31);
