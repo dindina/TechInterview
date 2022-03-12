@@ -32,6 +32,7 @@ public class ProductOfArrayExceptSelf {
             result1[i]= forwardproduct;
 
         }
+        printArray(result1);
 
         int reverseproduct=1;
         int [] result2 = new int[nums.length];
@@ -41,6 +42,7 @@ public class ProductOfArrayExceptSelf {
             reverseproduct = reverseproduct *nums[i+1];
             result2[i]= reverseproduct;
         }
+        printArray(result2);
 
         int [] result = new int[nums.length];
         for(int i=0; i < nums.length ; i++)
@@ -53,14 +55,25 @@ public class ProductOfArrayExceptSelf {
     }
 
     public static void main(String[] args) {
-        int [] nums = new int[] {-1,1,0,-3,3};
+        int [] nums = new int[] {1,2,3,4,};
 
         int [] result =  productExceptSelf(nums);
         //System.out.println("re " + result.length);
+        System.out.println("result");
         for(int j : result)
         {
             System.out.print(j  + ", ");
         }
+    }
+
+    public static void printArray(int[] nums)
+    {
+        System.out.println();
+        for(int j : nums)
+        {
+            System.out.print(j  + ", ");
+        }
+        System.out.println();
     }
 
 }

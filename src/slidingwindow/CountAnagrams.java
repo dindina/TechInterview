@@ -60,4 +60,5 @@ public class CountAnagrams {
         return sortedString.equals(sortedStringAnagram);
 
     }
+
 }
