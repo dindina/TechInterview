@@ -16,7 +16,7 @@ Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 public class Permutations {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        backtrack(nums,new ArrayList<Integer>(),result);
+        backtrack(nums,new ArrayList<>(),result);
         return result;
     }
 
