@@ -61,10 +61,10 @@ public class IslandProblem {
                             int newrow = row + direction[0];
                             int newcol = col + direction[1];
 
-                            if(newrow<0 || newrow >=grid.length || newcol <0 ||newcol >= grid[0].length)
-                            {
-                                continue;
-                            }
+                                if(newrow<0 || newrow >=grid.length || newcol <0 ||newcol >= grid[0].length)
+                                {
+                                    continue;
+                                }
 
                             if(grid[newrow][newcol] =='1' )
                             {

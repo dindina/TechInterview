@@ -13,7 +13,7 @@ public class MisingNumber {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{0,1};
+        int[] nums = new int[]{0,1,2,4};
         System.out.println(new MisingNumber().missingNumber(nums));
     }
 }

@@ -45,7 +45,8 @@ public class LongestConsecutiveSequence {
         {
             int prev = nums[i]-1;
             int next = nums[i]+1;
-            if(!set.contains(prev))
+            if(!set.contains(prev)) // if the prev number is there, then there is possibility of sequence
+                // skipping if it is not there
                 continue;
             else
             {

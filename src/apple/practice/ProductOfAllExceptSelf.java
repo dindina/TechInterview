@@ -23,6 +23,7 @@ public class ProductOfAllExceptSelf {
             forward_product = forward_product * nums[i-1]; // previous number
             result1[i] = forward_product;
         }
+        System.out.println("forward");
         printArray(result1);
 
         int reverse_product = 1;
@@ -32,7 +33,7 @@ public class ProductOfAllExceptSelf {
             reverse_product = reverse_product * nums[i+1]; // previous number
             result2[i] = reverse_product;
         }
-
+        System.out.println("reverse");
         printArray(result2);
 
         for(int i=0; i < nums.length ; i++)

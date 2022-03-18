@@ -67,13 +67,8 @@ public class LongestSubStringWithoutRepeat {
     public static void main(String[] args) {
         String str = "12 12  1234";
         //System.out.println(isUnique("abca"));
-        System.out.println(new LongestSubStringWithoutRepeat().lengthOfLongestSubstring(str));
-        System.out.println(new LongestSubStringWithoutRepeat().lengthOfLongestSubstringSet(str));
-
-
-        System.out.println("dinesh".substring(0,6));
-        System.out.println("dinesh".charAt(5));
-
+        System.out.println("1 " + new LongestSubStringWithoutRepeat().lengthOfLongestSubstring(str));
+        System.out.println("2 " + new LongestSubStringWithoutRepeat().lengthOfLongestSubstringSet(str));
 
     }
 }

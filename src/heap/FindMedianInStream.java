@@ -16,7 +16,7 @@ public class FindMedianInStream {
     public void addNum(int num) {
         maxheap.offer(num);
         minheap.offer(maxheap.poll());
-        if(maxheap.size() < minheap.size())
+        if(minheap.size() > maxheap.size())
         {
             maxheap.offer(minheap.poll());
         }

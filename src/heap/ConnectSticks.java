@@ -22,27 +22,21 @@ public class ConnectSticks {
         PriorityQueue<Integer> heap = new PriorityQueue<>();
         for(int i : sticks)
             heap.offer(i);
-        //System.out.println("heap " + heap);
         int sum=0;
         while(heap.size()!=1)
         {
-            //if(heap.size()>=2) {
                 int no1 = heap.poll();
                 int no2 = heap.poll();
                 sum = sum + no1 + no2;
                 heap.offer(no1+no2);
-            //}
-
-            //if(heap.size()==1) break;
 
         }
-        System.out.println(sum);
-        System.out.println(sum);
+
         return sum;
     }
 
     public static void main(String[] args) {
-        int[] sticks = new int[] {1,8,3,5};
+        int[] sticks = new int[] {2,4,3};
         System.out.println("final " + new ConnectSticks().connectSticks(sticks));
     }
 }

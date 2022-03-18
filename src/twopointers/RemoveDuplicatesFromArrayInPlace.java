@@ -34,7 +34,7 @@ public class RemoveDuplicatesFromArrayInPlace {
                 continue;
             }
 
-            nums[j++] = nums[i];
+           ;
         }
 
         //return j;

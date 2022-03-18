@@ -26,7 +26,7 @@ public class InvertTree {
         if(node == null)
             return;
 
-        System.out.print(node.getVal() + ",");
+        //System.out.print(node.getVal() + ",");
         inorder(node.left);
         inorder(node.right);
 

@@ -24,7 +24,6 @@ public class AddTwoNumbersInList {
             if(l2 != null)
                 l2 = l2.next;
         }
-
         if(carry >0)
         {
             sum.next = new ListNode(carry);

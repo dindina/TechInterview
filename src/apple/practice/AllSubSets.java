@@ -15,7 +15,7 @@ public class AllSubSets
             System.out.println("i = " + i);
             // generate bitmask, from 0..00 to 1..11
             String bitmask = Integer.toBinaryString(i).substring(1);
-            System.out.println("bitmask = " + bitmask);
+            //System.out.println("bitmask = " + bitmask);
             // append subset corresponding to that bitmask
             List<Integer> curr = new ArrayList();
             for (int j = 0; j < n; ++j) {
