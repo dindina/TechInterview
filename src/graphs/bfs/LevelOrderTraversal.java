@@ -27,7 +27,6 @@ public class LevelOrderTraversal {
             }
             result.add(level);
 
-
         }
 
         return result;
