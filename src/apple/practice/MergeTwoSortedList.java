@@ -41,8 +41,7 @@ public class MergeTwoSortedList {
         node2.next.next = new ListNode(4);
 
         ListNode merged = new MergeTwoSortedList().mergeTwoLists(node1,node2);
-        merged.printList();
-
+        System.out.println(merged);
     }
 
 
