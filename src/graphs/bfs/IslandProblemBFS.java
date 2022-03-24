@@ -31,7 +31,7 @@ Input: grid = [
 ]
 Output: 3
  */
-public class IslandProblem {
+public class IslandProblemBFS {
 
     public int numIslands(char[][] grid) {
 
@@ -40,7 +40,6 @@ public class IslandProblem {
         int directions[][] = new int[][]{
                 {1,0},{0,1},{-1,0},{0,-1}
         };
-        boolean [][] visited = new boolean[grid.length][];
         for(int i=0; i <grid.length;i++)
         {
             for(int j=0; j <grid[i].length;j++)
@@ -87,12 +86,12 @@ public class IslandProblem {
 
     public static void main(String[] args) {
         char [][]grid  = new char[][]{
-                {'1','1','1','1','0'},
-                {'1','1','0','1','0'},
-                {'1','1','0','0','0'},
-                {'0','0','0','0','0'}
+                {'1','1','1','1','1'},
+                {'1','1','1','1','1'},
+                {'1','1','1','1','1'},
+                {'1','1','1','1','1'}
         };
-        System.out.println(new IslandProblem().numIslands(grid));
+        System.out.println(new IslandProblemBFS().numIslands(grid));
 
 
     }

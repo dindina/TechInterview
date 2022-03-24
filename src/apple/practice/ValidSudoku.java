@@ -74,7 +74,7 @@ public class ValidSudoku {
 
                 if(ch!='.')
                 {
-                    if(!Character.isDigit(ch)) return false;
+                    //if(!Character.isDigit(ch)) return false;
                     if(!set.add(ch +" found in row " + i)) return false;
                     if(!set.add(ch +" found in column " + j)) return false;
                     if(!set.add(ch +" found in box " + i/3 +"-"+j/3)) return false;

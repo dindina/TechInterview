@@ -33,7 +33,7 @@ public class Permutations {
     }
 
     public static void main(String[] args) {
-        int [] nums = new int[]{1,-1,0,2};
+        int [] nums = new int[]{1,2,3};
         System.out.println(new Permutations().permute(nums));
     }
 

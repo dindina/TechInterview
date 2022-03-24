@@ -74,7 +74,6 @@ public class CourseSchedule {
         }
 
         visit[i]=1;
-
         return true;
     }
 
