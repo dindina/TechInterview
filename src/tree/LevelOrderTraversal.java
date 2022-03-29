@@ -55,8 +55,6 @@ public class LevelOrderTraversal {
             return result;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
-        int level=0;
-
         while(!queue.isEmpty())
         {
             List<Integer> levelList = new ArrayList<>();
@@ -70,7 +68,6 @@ public class LevelOrderTraversal {
                 if (node.right != null)
                     queue.offer(node.right);
             }
-            level++;
         }
 
         return result;

@@ -1,7 +1,6 @@
 package graphs;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 
 /*
@@ -19,13 +18,40 @@ Output: [[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]
 
 
  */
-public class AllPathsFromSourceToDestination {
+public class AllPathsFromSourceToDestinationBFS {
 
-    public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
+    public List<List<Integer>> allPathsSourceTarget(int[][] edges) {
 
-        List<List<Integer>> allpaths = new ArrayList<>();
-        dfs(graph , 0 , new ArrayList<>() , allpaths);
-        return allpaths;
+        List<List<Integer>> paths = new ArrayList<>();
+        Queue<List<Integer>> queue = new LinkedList<>();
+
+        queue.offer(Arrays.asList(0)); // zero edge
+
+        int destination = edges.length-1;
+        while(!queue.isEmpty())
+        {
+            List<Integer> path = queue.poll();
+            int current = path.get(path.size()-1);
+            if(current == destination)
+            {
+                paths.add(new ArrayList<>(path));
+            }
+            else // find the neighbours
+            {
+                int[] neighbours = edges[current];
+                for(int n : neighbours)
+                {
+                    List<Integer> list = new ArrayList<>(path);
+                    list.add(n);
+                    queue.offer(list);
+                }
+
+            }
+        }
+        //System.out.println(path);
+
+        return paths;
+
     }
 
     void dfs(int [][] graph , int sourceNode , List<Integer> path , List<List<Integer>> allpaths)
@@ -50,6 +76,6 @@ public class AllPathsFromSourceToDestination {
                 {1,2},{3},{3},{}
         };
 
-        System.out.println(new AllPathsFromSourceToDestination().allPathsSourceTarget(edges));
+        System.out.println(new AllPathsFromSourceToDestinationBFS().allPathsSourceTarget(edges));
     }
 }
