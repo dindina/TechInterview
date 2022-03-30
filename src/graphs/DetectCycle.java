@@ -33,7 +33,6 @@ public class DetectCycle {
         int[] neighbours = edges[i];
         for(int nei : neighbours)
         {
-            //System.out.println(nei);
             if (!dfs_cycle(nei,edges,visited))
                 return false;
         }

@@ -42,17 +42,14 @@ public class FindAllNodesInALevel {
             List<Integer> currentLevel = new ArrayList<>();
             for(int i=0 ; i< size ; i++) {
                 TreeNode current = queue.poll();
-
                 currentLevel.add(current.getVal());
-
-                    if (current.getLeft() != null)
+                if (current.getLeft() != null)
                         queue.offer(current.getLeft());
                     if (current.getRight() != null)
                         queue.offer(current.getRight());
 
             }
             result.add(0,currentLevel);
-
         }
 
         return result;

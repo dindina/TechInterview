@@ -57,7 +57,7 @@ public class AllPathsFromSourceToTarget {
 
             }
         }
-        //System.out.println(path);
+        System.out.println(paths);
 
         return paths;
 

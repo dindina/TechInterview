@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
-There is a bi-directional graph with n vertices, where each vertex is labeled from 0 to n - 1 (inclusive). The edges in the graph are represented as a 2D integer array edges, where each edges[i] = [ui, vi] denotes a bi-directional edge between vertex ui and vertex vi. Every vertex pair is connected by at most one edge, and no vertex has an edge to itself.
+There is a bi-directional graph with n vertices, where each vertex is labeled from 0 to n - 1 (inclusive).
+The edges in the graph are represented as a 2D integer array edges, where each edges[i] = [ui, vi] denotes a bi-directional edge between vertex ui and vertex vi. Every vertex pair is connected by at most one edge, and no vertex has an edge to itself.
 
 You want to determine if there is a valid path that exists from vertex source to vertex destination.
 
@@ -23,7 +24,7 @@ public class FindIfPathExistsDFS {
         for(int [] array : edges)
         {
             graph.get(array[0]).add(array[1]);
-            graph.get(array[1]).add(array[0]);
+            //graph.get(array[1]).add(array[0]);
         }
         System.out.println(graph);
 
@@ -35,12 +36,6 @@ public class FindIfPathExistsDFS {
 
 
     }
-
-    //10
-    //[[0,7],[0,8],[6,1],[2,0],[0,4],[5,8],[4,7],[1,3],[3,5],[6,5]]
-    //7
-    //5
-    // output [[7, 8, 4], [3], [0], [5], [7], [8], [1, 5], [], [], []]
 
     private void dfspath(List<List<Integer>> graph, boolean[] visited, int source) {
 
@@ -55,7 +50,7 @@ public class FindIfPathExistsDFS {
 
 
     public static void main(String[] args) {
-        int[][] edges = new int[][]{{0,1},{1,2},{2,0}};
-        System.out.println(new FindIfPathExistsDFS().validPath(3,edges,0,2));
+        int[][] edges = new int[][]{{0,1},{1,2},{1,3},{2,4},{3,5},{4,5},{5,6}};
+        System.out.println(new FindIfPathExistsDFS().validPath(7,edges,0,6));
     }
 }
