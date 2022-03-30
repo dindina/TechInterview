@@ -1,6 +1,6 @@
 package binarysearch;
 
-import breadthfirstsearch.TreeNode;
+import graphs.bfs.TreeNode;
 
 public class BSTSearch {
     public static void main(String[] args) {

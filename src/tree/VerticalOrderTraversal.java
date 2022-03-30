@@ -11,7 +11,7 @@ Input: root = [3,9,8,4,0,1,7]
 Output: [[4],[9],[3,0,1],[8],[7]]
  */
 
-import breadthfirstsearch.TreeNode;
+import graphs.bfs.TreeNode;
 
 import java.util.*;
 

@@ -10,8 +10,6 @@ public class LevelOrderTraversal {
         List<List<Integer>> result = new ArrayList<>();
         Queue<Node> queue = new LinkedList<>();
         queue.offer(root);
-
-
         while(!queue.isEmpty())
         {
             List<Integer> level = new ArrayList<>();

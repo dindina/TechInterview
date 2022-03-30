@@ -1,6 +1,6 @@
 package tree;
 
-import breadthfirstsearch.TreeNode;
+import graphs.bfs.TreeNode;
 
 public class SameTree {
 

@@ -1,6 +1,6 @@
 package tree;
 
-import breadthfirstsearch.TreeNode;
+import graphs.bfs.TreeNode;
 
 public class LowestCommonAncestorInTree {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

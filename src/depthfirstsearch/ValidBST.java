@@ -1,6 +1,6 @@
 package depthfirstsearch;
 
-import breadthfirstsearch.TreeNode;
+import graphs.bfs.TreeNode;
 
 import java.io.IOException;
 

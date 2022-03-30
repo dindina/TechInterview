@@ -1,6 +1,6 @@
 package tree;
 
-import breadthfirstsearch.TreeNode;
+import graphs.bfs.TreeNode;
 
 /*
 https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/

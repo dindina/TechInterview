@@ -1,7 +1,7 @@
 package tree;
 
 
-import breadthfirstsearch.TreeNode;
+import graphs.bfs.TreeNode;
 
 import java.util.HashMap;
 import java.util.LinkedList;

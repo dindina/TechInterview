@@ -1,4 +1,4 @@
-package breadthfirstsearch;
+package graphs.bfs;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

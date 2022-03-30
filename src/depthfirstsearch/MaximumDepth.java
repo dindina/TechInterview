@@ -1,7 +1,6 @@
 package depthfirstsearch;
 
-import java.util.List;
-import breadthfirstsearch.TreeNode;
+import graphs.bfs.TreeNode;
 
 
 public class MaximumDepth {

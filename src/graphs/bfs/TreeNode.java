@@ -1,4 +1,4 @@
-package breadthfirstsearch;
+package graphs.bfs;
 
 
 public class TreeNode {

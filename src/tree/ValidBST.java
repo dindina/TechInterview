@@ -1,6 +1,6 @@
 package tree;
 
-import breadthfirstsearch.TreeNode;
+import graphs.bfs.TreeNode;
 
 public class ValidBST {
     public boolean dfs_helper(TreeNode root, int min, int max)
