@@ -41,7 +41,7 @@ public class IslandPerimeter {
                 if (i - 1 >= 0 && grid[i - 1][j] == 1) {
                     result -= 2;
                 }
-
+                //check left
                 if (j - 1 >= 0 && grid[i][j - 1] == 1) {
                     result -= 2;
                 }

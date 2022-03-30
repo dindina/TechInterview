@@ -1,6 +1,4 @@
-package tree;
-
-import breadthfirstsearch.TreeNode;
+package graphs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +10,7 @@ You want to determine if there is a valid path that exists from vertex source to
 
 Given edges and the integers n, source, and destination, return true if there is a valid path from source to destination, or false otherwise.
  */
-public class FindIfPathExists {
+public class FindIfPathExistsDFS {
 
     public boolean validPath(int max, int[][] edges, int source, int destination) {
 
@@ -58,6 +56,6 @@ public class FindIfPathExists {
 
     public static void main(String[] args) {
         int[][] edges = new int[][]{{0,1},{1,2},{2,0}};
-        System.out.println(new FindIfPathExists().validPath(3,edges,0,2));
+        System.out.println(new FindIfPathExistsDFS().validPath(3,edges,0,2));
     }
 }
