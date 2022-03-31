@@ -47,7 +47,7 @@ public class MergeKSortedLists {
             ListNode node = minHeap.poll();
             current.next = new ListNode(node.val);
             current = current.next;
-            node = node.next; // this taks care of selecting the node to move
+            node = node.next; // this takes care of selecting the node to move
 
             if(node !=null) // if the list is null it reached the end
             {

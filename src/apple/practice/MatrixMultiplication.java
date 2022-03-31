@@ -16,7 +16,7 @@ public class MatrixMultiplication {
         int m = matrix2[0].length; // column
         int[][] result = new int[i][m];
 
-        // traverse matrix along each row
+        // traverse matrix 1 for row and column
         for (int a = 0; a < i; a++) {
             for (int b = 0; b < j; b++) {
                 // traverse the matrix2 along the columns, keeping row as fixed

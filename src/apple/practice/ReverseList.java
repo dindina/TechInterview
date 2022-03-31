@@ -20,7 +20,7 @@ public class ReverseList {
     {
         ListNode curr = node;
         ListNode prev = null;
-        ListNode next = node;
+        ListNode next;
         while(curr !=null)
         {
             next = curr.next;

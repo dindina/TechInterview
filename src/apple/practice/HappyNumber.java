@@ -31,7 +31,7 @@ public class HappyNumber {
         //System.out.println(sumofsquares(100));
         System.out.println(isHappy(num));
     }
-
+    //cycle detection using set
     public static boolean isHappy(int num) {
        HashSet <Integer> set = new HashSet<>();
         while(num!=1 && !set.contains(num)) {
