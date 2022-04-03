@@ -31,8 +31,7 @@ public class CombinationSum {
         return result;
     }
 
-    private void backtrack(int[] candidates, int start, ArrayList<Integer> objects, List<List<Integer>> result, int target) {
-        if (target <0) return;
+    private void backtrack(int[] candidates, int start, ArrayList<Integer> objects, List<List<Integer>> result, int target) {if (target <0) return;
         if(target==0)
            result.add(new ArrayList<>(objects));
 
