@@ -81,10 +81,7 @@ public class ValidSudoku {
                 }
             }
         }
-        for(String str : set) {
-            if(str.contains("box"))
-            System.out.println(str);
-        }
+
         return true;
     }
 }

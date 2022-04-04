@@ -46,8 +46,8 @@ public class CombinationSum {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[] {2,3,6,7};
-        int target = 7;
+        int[] nums = new int[] {1,2,5};
+        int target = 4;
         System.out.println(new CombinationSum().combinationSum(nums,target));
     }
 }
