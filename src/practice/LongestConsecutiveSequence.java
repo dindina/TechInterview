@@ -5,34 +5,32 @@ import java.util.HashSet;
 public class LongestConsecutiveSequence {
 
     public static void main(String[] args) {
-        int [] nums = new int[] {1,3,2,100,5,4};
+        int [] nums = new int[] {1,3,2,100,4};
         System.out.println(new LongestConsecutiveSequence().longestConsecutive(nums));
     }
 
     public int longestConsecutive(int[] nums) {
-        int result=0;
-        if(nums.length ==0) return 0;
-        if(nums.length==1) return 1;
         HashSet<Integer> set = new HashSet<>();
-        for (int i : nums)
+        int max=0;
+        for(int i:nums)
         {
             set.add(i);
         }
-        System.out.println(set);
 
-        for(Integer num : set)
+        for(int i :set)
         {
-            int prev = num -1;
-            if(!set.contains(prev)) // this is the first of the sequence
+            int prev = i-1;
+            int curr =i;
+            if(!set.contains(prev))
             {
-                int counter =0;
-                while(set.contains(num++))
-                    counter++;
-                result = Math.max(counter,result);
+                int count=0;
+                while(set.contains(curr++))
+                    count++;
+                max = Math.max(count,max);
             }
-
         }
-        return result;
+
+        return max;
     }
 
 

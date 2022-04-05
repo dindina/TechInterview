@@ -25,8 +25,8 @@ public class SubArrayEqualsSum {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1,6,2,5};
-        int sum = 7;
+        int[] nums = new int[]{0,0,0,0,0,0,0,0,0,0};
+        int sum=0;
 
         System.out.println(new SubArrayEqualsSum().subarraySum(nums,sum));
     }
