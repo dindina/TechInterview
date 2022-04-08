@@ -11,9 +11,7 @@ public class RatInAMazeProblem {
                 {1,1,0,0},
                 {0,1,1,1}
         };
-        System.out.println("maze "  +maze.length);
-        System.out.println("maze "  +maze[0].length);
-        System.out.println("maze "  +maze.length);
+
             System.out.println(new RatInAMazeProblem().allPath(maze));
     }
 

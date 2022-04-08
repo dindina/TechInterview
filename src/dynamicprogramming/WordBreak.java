@@ -28,9 +28,7 @@ Input: s = "catsandog", wordDict = ["cats","dog","sand","and","cat"]
 Output: false
  */
 public class WordBreak {
-
     public static boolean wordBreak(String str, List<String> wordDict) {
-
         int length = str.length();
         boolean dp[] = new boolean[length+1];
         dp[0]=true;
@@ -42,7 +40,6 @@ public class WordBreak {
                     dp[i] = true;
             }
         return dp[length];
-
     }
 
     public static void main(String[] args) {

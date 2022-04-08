@@ -24,7 +24,6 @@ Explanation: There are three ways to climb to the top.
  */
 
 public class ClimbingStairs {
-
     public static int climbStairs(int n) {
         int[] dp = new int[n+2];
         dp[0]=0;
@@ -32,9 +31,7 @@ public class ClimbingStairs {
         dp[2]=2;
         for(int i=2; i < n ; i++)
             dp[i+1] = dp[i]+dp[i-1];
-
         return dp[n];
-
     }
 
     public static void main(String[] args) {

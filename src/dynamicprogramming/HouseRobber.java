@@ -21,23 +21,15 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 Total amount you can rob = 2 + 9 + 1 = 12.
  */
 public class HouseRobber {
-
     public static int rob(int[] nums) {
-
-        // solve using dp array
-        int [] dp = new int[nums.length+1];
-        //System.out.println(nums.length);
-        // initialize dp
+     int [] dp = new int[nums.length+1];
         dp[0]=0;
         dp[1] = nums[0];
-
         for(int i=1 ; i < nums.length ; i++)
         {
             dp[i+1] = Math.max(dp[i] , dp[i-1] + nums[i]);
         }
-        System.out.println(dp);
         return dp[nums.length];
-
     }
 
     public static void main(String[] args) {

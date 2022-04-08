@@ -13,10 +13,8 @@ public class Factorial {
     }
 
     private static int factorial(final int num , int[] dp) {
-
         if(num ==0)
             return 0;
-
         for(int i= 1 ; i < num ; i++ )
             dp[i+1] = dp[i]*(i+1);
         return dp[num];

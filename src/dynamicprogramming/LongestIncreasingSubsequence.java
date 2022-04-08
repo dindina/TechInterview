@@ -25,8 +25,6 @@ Input: nums = [7,7,7,7,7,7,7]
 Output: 1
  */
 public class LongestIncreasingSubsequence {
-
-
     public static int lengthOfLIS(int[] nums) {
 
         int dp[] = new int[nums.length+1];
@@ -40,10 +38,7 @@ public class LongestIncreasingSubsequence {
             }
             result = Math.max(result, dp[i]);
         }
-
-
         return result;
-
     }
 
     public static void main(String[] args) {
