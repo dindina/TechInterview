@@ -67,6 +67,7 @@ public class RottenOranges {
                for(int[] array : directions)
                {
                     int newrow = item[0]+array[0];
+
                     int newcol = item[1]+array[1];
                     if(newrow >=0 && newcol>=0 && newrow < grid.length && newcol < grid[0].length && !visited[newrow][newcol])
                    {
