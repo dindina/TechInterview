@@ -12,7 +12,7 @@ public class FindIndexOfRotation {
         int right = nums.length-1;
         if (nums[0] < nums[right])
             return 0;
-        while(left <=right)
+        while(left <= right)
         {
             int mid = (left + right)/2;
             System.out.println("mid " + mid);

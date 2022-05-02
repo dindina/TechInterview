@@ -27,8 +27,8 @@ public class SearchForARange {
     public static void main(String[] args) {
         int [] nums = new int[]{5,7,7,8,8,10};
         int[] result = new SearchForARange().find(nums,8);
-        System.out.println(result[0]);
-        System.out.println(result[1]);
+        System.out.println("ans " + result[0]);
+        System.out.println("ans " + result[1]);
     }
 
     private int[] find(int[] nums, int target) {
@@ -52,11 +52,8 @@ public class SearchForARange {
 
         while (left < right) {
             int mid = left + (right - left) / 2;
-            if(nums[mid] ==target || target== nums[mid+1])
+            if(nums[mid] ==target || nums[mid+1] ==target )
             {
-                System.out.println(mid);
-                System.out.println(mid+1);
-
                 result[0]=mid;
                 result[1]=mid+1;
 

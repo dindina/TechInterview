@@ -3,10 +3,18 @@ package apple.practice;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+/*
+Given a collection of numbers, nums, that might contain duplicates,
+ return all possible unique permutations in any order.
+ Input: nums = [1,1,2]
+Output:
+[[1,1,2],
+ [1,2,1],
+ [2,1,1]]
+ */
 public class permutations2 {
     public static void main(String[] args) {
-        int[] nums = {1,1,2};
+        int[] nums = {1,2,3};
         System.out.println(new permutations2().perm(nums));
 
     }
@@ -24,10 +32,11 @@ public class permutations2 {
         result.add(new ArrayList<>(objects));
 
         for(int i=0; i< nums.length; i++)
-        {       if(used[i] || i >0 && nums[i]==nums[i-1] && !used[i-1]) continue;
-            used[i]=true;
+        {
+            if(used[i] || i >0 && nums[i]==nums[i-1] && !used[i-1]) continue;
 
-            objects.add(nums[i]);
+                used[i]=true;
+                objects.add(nums[i]);
                 backtrack_perm(nums, result, objects,used);
                 used[i]=false;
                 objects.remove(objects.size() - 1);

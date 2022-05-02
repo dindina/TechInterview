@@ -20,22 +20,23 @@ public class Subsets {
         System.out.println(new subsets().subsets(nums));
     }
 
-    public List<List<Integer>> subsets(int[] nums) {
+    public List<List<Integer>> subsets(int[] nums)
+    {
         List<List<Integer>> result = new ArrayList<>();
-        backtrack(0,nums,new ArrayList<>(),result);
+        int startpos=0;
+        backtrakl(startpos,nums,result,new ArrayList<>());
         return result;
     }
 
-    private void backtrack(int start, int[] nums, ArrayList<Integer> objects, List<List<Integer>> result) {
-        result.add(new ArrayList(objects));
-
-        for(int i= start ; i < nums.length; i++)
+    private void backtrakl(int startpos, int[] nums, List<List<Integer>> result, ArrayList<Integer> objects) {
+        result.add(new ArrayList<>(objects));
+        for(int i= startpos; i< nums.length;i++)
         {
             objects.add(nums[i]);
-            backtrack(i+1,nums,objects,result);
+            backtrakl(startpos+1,nums,result,objects);
             objects.remove(objects.size()-1);
-
         }
-
     }
+
+
 }

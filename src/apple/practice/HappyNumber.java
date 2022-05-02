@@ -27,8 +27,9 @@ Explanation:
 public class HappyNumber {
 
     public static void main(String[] args) {
-        int num = 1000009;
-        //System.out.println(sumofsquares(100));
+        //int num = 19; // any number with digit 1 and 9 will be happy number
+        int num = 12;
+        //System.out.println(sumofsquares(num));
         System.out.println(isHappy(num));
     }
     //cycle detection using set
@@ -36,7 +37,9 @@ public class HappyNumber {
        HashSet <Integer> set = new HashSet<>();
         while(num!=1 && !set.contains(num)) {
             set.add(num);
+            System.out.println(num);
             num = sumofsquares(num);
+
 
         }
         if(num==1) return true;

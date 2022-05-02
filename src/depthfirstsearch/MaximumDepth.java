@@ -5,15 +5,7 @@ import graphs.bfs.TreeNode;
 
 public class MaximumDepth {
 
-        public static int maxDepth(TreeNode root) {
-
-            if(root == null)
-                return 0;
-            int depth=0;
-            return depth;
-        }
-
-        public static int inorder(TreeNode node)
+    public static int inorder(TreeNode node)
         {
             if(node == null)
                 return 0;

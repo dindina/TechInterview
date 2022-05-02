@@ -25,7 +25,7 @@ public class AllPaths {
 
     private List<List<Integer>> findAllPaths(int[][] grid) {
         List<List<Integer>> allpaths = new ArrayList<>();
-        int source=0;
+        int source=2;
         int destination=4;
         int total = grid.length;
         boolean[] visited = new boolean[total];

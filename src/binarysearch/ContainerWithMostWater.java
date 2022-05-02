@@ -1,6 +1,7 @@
 package binarysearch ;
 /*
-ou are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+you are given an integer array height of length n.
+     There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
 
 Find two lines that together with the x-axis form a container, such that the container contains the most water.
 
@@ -29,6 +30,7 @@ public class ContainerWithMostWater {
         {
             //calculate area between left and right
             int area = Math.min(height[left],height[right])*(right-left);
+            System.out.println("area = " + area);
             maxarea = Math.max(area,maxarea);
             // how to increment the pointer ?
 
