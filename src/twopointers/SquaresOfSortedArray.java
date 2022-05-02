@@ -23,31 +23,28 @@ public class SquaresOfSortedArray {
         }
     }
 
-    private static int[] sortedSquares(final int[] array) {
+    private static int[] sortedSquares(final int[] nums) {
 
-        int left=0;
-        int right = array.length-1;
-        int maxpointer = array.length-1;
-        int [] result = new int[array.length];
+        int left = 0;
+        int right= nums.length-1;
+        int[] result = new int[nums.length];
 
-        while(left <= right)
+        for(int i= nums.length-1 ; i>=0 ; i--)
         {
-            int rightSquare = array[right]*array[right];
-            int leftSquare = array[left]*array[left];
-
-            if(rightSquare > leftSquare)
+            if(Math.abs(nums[left]) > Math.abs(nums[right]))
             {
-                result[maxpointer--] = rightSquare;
-                right--;
+                result[i] = nums[left]*nums[left];
+                left++;
             }
             else
             {
-                result[maxpointer--] = leftSquare;
-                left++;
+                result[i] = nums[right]*nums[right];
+                right--;
             }
         }
         return result;
-
     }
+
+
 
 }
