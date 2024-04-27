@@ -11,13 +11,9 @@ public class DetectCycle {
         for(int i=0 ; i< max ; i++)
         {
             if(!dfs_cycle(i,edges,visited)) {
-                for(int k : visited)
-                    System.out.println(k);
                 return true;
             }
         }
-        for(int i : visited)
-            System.out.println(i);
         return result;
 
     }

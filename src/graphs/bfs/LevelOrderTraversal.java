@@ -46,6 +46,7 @@ public class LevelOrderTraversal {
         n1.addEdge(n3);n1.addEdge(n4);
         n2.addEdge(n5);
         n5.addEdge(n6);
+        System.out.println(n0);
 
         System.out.println(new LevelOrderTraversal().levelOrder(n0));
     }

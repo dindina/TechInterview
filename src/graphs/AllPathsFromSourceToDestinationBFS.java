@@ -26,24 +26,27 @@ public class AllPathsFromSourceToDestinationBFS {
         Queue<List<Integer>> queue = new LinkedList<>();
 
         queue.offer(Arrays.asList(0)); // zero edge
+        System.out.println(queue);
 
         int destination = edges.length-1;
         while(!queue.isEmpty())
         {
-            List<Integer> path = queue.poll();
-            int current = path.get(path.size()-1);
-            if(current == destination)
+            List<Integer> neigh = queue.poll();
+            int lastElement = neigh.get(neigh.size()-1);
+            if(lastElement == destination)
             {
-                paths.add(new ArrayList<>(path));
+                paths.add(new ArrayList<>(neigh));
+
             }
-            else // find the neighbours
+            else // find the neighbours of the last element
             {
-                int[] neighbours = edges[current];
-                for(int n : neighbours)
+                int[] neighboursOfLastElement = edges[lastElement];
+                for(int n : neighboursOfLastElement)
                 {
-                    List<Integer> list = new ArrayList<>(path);
-                    list.add(n);
-                    queue.offer(list);
+                    List<Integer> list = new ArrayList<>(neigh); // initial to the already available path
+                    list.add(n); // add to the path
+                    queue.offer(list); // add to the queue
+                    System.out.println(queue);
                 }
 
             }
