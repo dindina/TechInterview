@@ -30,7 +30,7 @@ public class GraphTraversal {
         n4.addEdge(n3);
         n5.addEdge(n3);
 
-        //System.out.println(bfsTraveral(n0));
+        System.out.println(bfsTraveral(n0));
         System.out.println(dfsTraveral(n0));
 
     }
@@ -42,7 +42,7 @@ public class GraphTraversal {
     }
 
     private static void dfsTraversalUtil(final Node node, final Set<Integer> visited) {
-        System.out.println(node.val);
+        //System.out.println(node.val);
         visited.add(node.val);
         for(Node current : node.neighbors)
             if(!visited.contains(current.val))
@@ -60,7 +60,7 @@ public class GraphTraversal {
         while(!q.isEmpty())
         {
             Node currentNode = q.remove();
-            System.out.println(currentNode.val);
+            //System.out.println(currentNode.val);
 
             for(Node node : currentNode.neighbors)
             {
