@@ -71,7 +71,6 @@ public class BFSAndDFSTraversal {
         }
         System.out.println(graph);
 
-        //return null;
 
         Set<Integer> visited = new HashSet<>();
         Queue<Integer>queue = new LinkedList<>();
