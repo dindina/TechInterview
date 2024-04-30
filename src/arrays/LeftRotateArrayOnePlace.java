@@ -1,6 +1,6 @@
 package arrays;
 
-public class LeftRotateArray {
+public class LeftRotateArrayOnePlace {
 
     public static void main(String[] args) {
         int [] nums = new int[]{1,3,4,5,7};
