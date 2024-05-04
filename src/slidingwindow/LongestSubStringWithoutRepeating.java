@@ -12,27 +12,31 @@ import java.util.Set;
 public class LongestSubStringWithoutRepeating{
 
     public static void main(String[] args) {
-        String str = ""; // solution abc
+        String str = "abcabcd"; // solution abc
         System.out.println(solution(str));
 
     }
 
-    private static int solution(final String str) {
-        int maxlength = 0;
-        int windowend, windowstart = 0;
-
-        Set<Character> set = new HashSet<>();
-        for(windowend=0;windowend<str.length();windowend++)
-        {
-            if (!set.contains(str.charAt(windowend))) {
-                set.add(str.charAt(windowend));
-                maxlength = Math.max(maxlength, set.size());
-            } else { // moving the window and removing from the set
-                set.remove(str.charAt(windowstart++));
-            }
-
+    private static int solution(final String s) {
+        if (s == null || s.length() == 0 || s.equals("")) {
+            return 0;
         }
-        return maxlength;
+
+        final int[] cPos = new int[256];
+        cPos[s.charAt(0)] = 1;
+
+        int slow = 0;
+        int maxWindowSize = 1;
+        for (int fast = 1; fast < s.length(); fast++) {
+            final char c = s.charAt(fast);
+            if (cPos[c] != 0) {
+                slow = Math.max(slow, cPos[c]);
+            }
+            cPos[c] = fast+1;
+            maxWindowSize = Math.max(fast - slow + 1, maxWindowSize);
+        }
+
+        return maxWindowSize;
 
     }
 
