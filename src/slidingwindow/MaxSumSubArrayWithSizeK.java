@@ -3,27 +3,12 @@ package slidingwindow;
 public class MaxSumSubArrayWithSizeK {
     public static void main(String[] args) {
         //int array[] = new int[]{1,2,5,6,7,9,-10};
-        int array[] = new int[]{5,5,6,7,9};
-        int size = 3 ;
+        int[] nums = new int[]{1,3,5,-4,8};
+        int sum = 8;
 
-        int windowstart=0;
-        int maxsum=0;
-        int windowsum=0;
-        for(int windowend=0; windowend< array.length;windowend++)
-        {
-            windowsum+=array[windowend];
-            if(windowend >= size-1)
-            {
-                maxsum = Math.max(maxsum,windowsum);
-                //System.out.println(windowend  + " , " +  maxsum);
-                windowsum -= array[windowstart]; // subtracting from the window
-                windowstart++;
-            }
-        }
-        //System.out.println(maxsum);
 
-        slidingWindow(array);
-        //findMinimumSizeSubArrayWithGiveSum(array,16);
+        //slidingWindow(nums);
+        findMinimumSizeSubArrayWithGiveSum(nums,sum);
         //System.out.println(findMinSubArray(1,array));
     }
 

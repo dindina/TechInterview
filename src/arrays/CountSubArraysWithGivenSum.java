@@ -24,8 +24,8 @@ import java.util.Map;
 public class CountSubArraysWithGivenSum {
 
     public static void main(String[] args) {
-        int [] nums = new int []{1,1,1,};
-        int k=3;
+        int [] nums = new int []{1,0,1,1};
+        int k=2;
 
         System.out.println(new CountSubArraysWithGivenSum().subarraySum(nums,k));
     }
