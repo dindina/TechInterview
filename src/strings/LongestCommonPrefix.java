@@ -22,22 +22,23 @@ Explanation: There is no common prefix among the input strings.
 public class LongestCommonPrefix {
 
     public static void main(String[] args) {
-        String [] strings = new String[]{"fl","flow","flowing"};
+        System.out.println("flow".indexOf("flowing"));
+        String [] strings = new String[]{"flowing","abc","fl"};
         System.out.println(new LongestCommonPrefix().longestCommonPrefix(strings));
+
 
     }
 
     public String longestCommonPrefix(String[] strs) {
-        //if(strs.length==0)
+
         StringBuffer prefix = new StringBuffer(strs[0]);
         for(int i=1; i< strs.length;i++)
         {
             String current = strs[i];
-
             while(current.indexOf(prefix.toString()) !=0)
             {
                 prefix.deleteCharAt(prefix.length()-1);
-
+                //System.out.println("prefix " + prefix);
             }
         }
         return prefix.toString();

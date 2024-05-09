@@ -50,7 +50,7 @@ public class LRUCache {
     {
         Node node = tail.prev;
         removeNode(node);
-        return node;
+       return node;
     }
 
     int capacity;
@@ -95,12 +95,9 @@ public class LRUCache {
                 cacheMap.remove(pop.key);
                 size--;
             }
-            else
-            {
-                cacheMap.put(key,newNode);
-                addNode(node);
-                size++;
-            }
+            cacheMap.put(key,newNode);
+            addNode(node);
+            size++;
 
         }
         else {
