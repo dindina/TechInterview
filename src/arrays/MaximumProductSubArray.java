@@ -2,24 +2,28 @@ package arrays;
 
 public class MaximumProductSubArray {
     public static void main(String[] args) {
-        int[] nums = new int[] {1,-2,-3,4};
+        int[] nums = new int[] {1,0,-2,-3,4,4,-5,-9};
+        System.out.println(new MaximumProductSubArray().maxproduct(nums));
 
     }
 
     public int maxproduct(int [] nums)
     {
-        int result =nums[0];
-        int max_so_far=nums[0];
-        int min_so_far=nums[0];
-        for(int i=1; i<nums.length;i++)
+        int max=Integer.MIN_VALUE;
+        int prefix=1;
+        int suffix=1;
+        int n = nums.length;
+        for(int i=0; i<n;i++)
         {
-            int prev= max_so_far;
-            max_so_far= Math.max(Math.max(nums[i], nums[i]*max_so_far), nums[i]*min_so_far);
-            min_so_far= Math.max(Math.max(nums[i], nums[i]*prev), nums[i]*min_so_far);
-            result=Math.max(result,max_so_far);
+            if(prefix==0)  prefix=1;
+            if(suffix==0)  suffix=1;
+            prefix*=nums[i]; // foward
+            suffix*=nums[n-i-1]; // backward
+            max = Math.max(max, Math.max(prefix,suffix));
         }
 
-        return result;
+        return max;
 
     }
 }
+
