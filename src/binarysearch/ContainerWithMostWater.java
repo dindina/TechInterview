@@ -29,7 +29,7 @@ public class ContainerWithMostWater {
         while(left < right)
         {
             //calculate area between left and right
-            int area = Math.min(height[left],height[right])*(right-left);
+            int area = Math.min(height[left],height[right])   *  (right-left);
             System.out.println("area = " + area);
             maxarea = Math.max(area,maxarea);
             // how to increment the pointer ?

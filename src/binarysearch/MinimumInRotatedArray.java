@@ -17,7 +17,7 @@ public class MinimumInRotatedArray {
         while(left<=right)
         {
             int mid = left + (right-left)/2;
-            System.out.println("mid " + mid);
+            //System.out.println("mid " + mid);
             if(nums[mid] > nums[mid+1])
                 return nums[mid+1];
             if(nums[mid] < nums[left])
