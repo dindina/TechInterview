@@ -17,13 +17,13 @@ public class SquareRoot {
             {
                 left=mid+1;
             }
-            else
-                return mid;
+            //else
+                //return mid;
         }
         return right;
     }
 
     public static void main(String[] args) {
-        System.out.println(new SquareRoot().mySqrt(24));
+        System.out.println(new SquareRoot().mySqrt(124));
     }
 }
