@@ -23,23 +23,45 @@ Explanation: There are three ways to climb to the top.
 3. 2 steps + 1 step
  */
 
+import arrays.ArrayUtil;
+
 public class ClimbingStairs {
     public static int climbStairs(int n) {
         int[] dp = new int[n+2];
         dp[0]=0;
         dp[1]=1;
         dp[2]=2;
-        for(int i=2; i < n ; i++)
-            dp[i+1] = dp[i]+dp[i-1];
+        for(int i=3; i <=n ; i++) {
+            //System.out.println("hello " +dp[i-1] + dp[i - 2]);
+            dp[i] = dp[i-1] + dp[i - 2];
+            //System.out.println("dp[] " + dp[i]);
+        }
+        ArrayUtil.printArray(dp);
         return dp[n];
     }
 
+
+    public static int climbStairsRecursion(int n) {
+
+        if(n==0)
+            return 1;
+        if(n==1)
+           return 1;
+        int left = climbStairsRecursion(n-1);
+        int right = climbStairsRecursion(n-2);
+        return left+right;
+
+    }
+
+
     public static void main(String[] args) {
 
-        System.out.println(climbStairs(1));
-        System.out.println(climbStairs(2));
+        //System.out.println(climbStairs(1));
         System.out.println(climbStairs(3));
-        System.out.println(climbStairs(4));
-        System.out.println(climbStairs(5));
+        ///System.out.println(climbStairsRecursion(3));
+
+        //System.out.println(climbStairs(3));
+        //System.out.println(climbStairs(4));
+        //System.out.println(climbStairs(5));
     }
 }
